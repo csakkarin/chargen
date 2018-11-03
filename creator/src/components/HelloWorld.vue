@@ -8,12 +8,30 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 @Component
 export default class HelloWorld extends Vue {
 
+
+  private products = [] as any[];
+
   public mounted() {
     this.test();
+    this.getExisting();
+  }
+
+  private getExisting(){
+    const self = this;
+    const request = window.indexedDB.open('EXAMPLE_DB', 1);
+    request.onsuccess = function(dbevent:any) {
+          const db = dbevent.target.result;
+          const tx = db.transaction('products', 'readonly');
+          const store = tx.objectStore('products');
+          store.getAll().onsuccess = function(event:any) {
+            self.products = event.target.result;
+        };
+    };
+
   }
 
   private test() {
-    let request = window.indexedDB.open('EXAMPLE_DB', 1);
+    const request = window.indexedDB.open('EXAMPLE_DB', 1);
     request.onupgradeneeded = function(event: any) {
       const db = event.target.result;
       const store = db.createObjectStore('products', { keyPath: 'id' });
@@ -23,7 +41,7 @@ export default class HelloWorld extends Vue {
       const products = [
         { id: 1, name: 'Red Men T-Shirt', price: '$3.99' },
         { id: 2, name: 'Pink Women Shorts', price: '$5.99' },
-        { id: 3, name: 'Nike white Shoes', price: '$300' }
+        { id: 3, name: 'Nike white Shoes', price: '$300' },
       ];
 
       // get database from event

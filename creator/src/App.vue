@@ -7,8 +7,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
-import WizardStep1 from './components/wizard/WizardStep1.vue';
+import HeroCreator from './components/HeroCreator.vue';
 
 export default class App extends Vue {}
 </script>

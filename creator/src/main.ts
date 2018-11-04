@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import App from './App.vue';
 import router from './router';
-import WizardStep1 from './components/wizard/WizardStep1.vue';
+import CreationWizard from './components/wizard/CreationWizard.vue';
 import './registerServiceWorker';
 
 // tslint:disable-next-line:no-unused-expression
@@ -12,8 +12,7 @@ new Vue({
   template: '<App/>',
   components: {
     App,
-    WizardStep1,
-  }
+    CreationWizard,
+  },
 
 });
-//.$mount('#app');

@@ -1,21 +1,21 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import HelloWorld from './components/HelloWorld.vue';
-import WizardStep1 from './components/wizard/WizardStep1.vue';
+import HeroCreator from './components/HeroCreator.vue';
+import CreationWizard from './components/wizard/CreationWizard.vue';
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Hello',
-      component: HelloWorld
+      name: 'Home',
+      component: HeroCreator,
     },
     {
       path: '/wizard',
       name: 'Wizard',
-      component: WizardStep1
+      component: CreationWizard,
     }
   ]
 })

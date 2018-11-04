@@ -3,8 +3,9 @@
     <h3><router-link to="/wizard">Create Character</router-link></h3>
   </span>
   <div class="existing">
-    <div v-for="item in products">
-      {{ item.name }}
+    <div v-for="hero in heros">
+      {{ hero.name }}
+      <button @click="deleteHero(hero.id)">Delete</button>
     </div>
   </div>
 </div>

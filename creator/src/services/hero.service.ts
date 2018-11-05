@@ -4,7 +4,7 @@ import { __await } from 'tslib';
 
 class HeroService {
 
-    private readonly dbName: string = 'EXAMPLE_DB';
+    private readonly dbName: string = 'HeroCreator';
     private readonly dbTable: string = 'Heros';
 
     public async getAll(): Promise<Hero[]> {
@@ -15,11 +15,12 @@ class HeroService {
        return hero;
     }
     public async addHero(hero: Hero): Promise<Hero> {
-        const id = await dbService.save(this.dbName, 1, this.dbTable, hero);
+        const id = await dbService.save(this.dbName, 1, this.dbTable, hero) as number;
+        hero.id = id;
         return hero;
     }
     public async updateHero(hero: Hero): Promise<Hero> {
-        await dbService.update(this.dbName, 1, this.dbTable, hero,hero.id);
+        await dbService.update(this.dbName, 1, this.dbTable, hero, hero.id);
         return hero;
     }
     public async deleteHero(id: number): Promise<Hero[]> {

@@ -9,26 +9,27 @@ import { Component, Emit, Prop, Watch } from 'vue-property-decorator';
 
 @Component({})
 export default class WizardStep1 extends Vue {
-  @Prop() hero: Hero;
-  addingHero = !this.hero;
-  editingHero: Hero | null;
-
-  @Watch('hero') onHeroChanged(value: string, oldValue: string) {
-    this.editingHero = this.cloneIt();
-  }
-  $refs: {    
+  public $refs: {
     name: HTMLElement;
   };
 
-  addHero() {
+  @Prop() public hero: Hero;
+  public addingHero = !this.hero;
+  public editingHero: Hero | null;
+
+  @Watch('hero') public onHeroChanged(value: string, oldValue: string) {
+    this.editingHero = this.cloneIt();
+  }
+
+  public addHero() {
     const hero = this.editingHero as Hero;
     this.emitRefresh('add', hero);
   }
-  @Emit('cancelled') cancel() {
+  @Emit('cancelled') public cancel() {
     this.editingHero = null;
   }
 
-  cloneIt() {
+  public cloneIt() {
     return Object.assign({}, this.hero);
   }
   public created() {

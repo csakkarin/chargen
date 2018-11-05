@@ -15,7 +15,7 @@ export default class HeroCreator extends Vue {
       this.heros = heros;
     });
   }
-  deleteHero(id: number){
+  protected deleteHero(id: number) {
     heroService.deleteHero(id).then((heros) => {
       this.heros = heros;
     });

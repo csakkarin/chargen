@@ -3,7 +3,7 @@ export default class Hero {
     public name: string;
     public gender: string;
 
-    constructor( name: string, gender: string){
+    constructor( name: string, gender: string) {
         this.id = 0;
         this.name = name;
         this.gender = gender;

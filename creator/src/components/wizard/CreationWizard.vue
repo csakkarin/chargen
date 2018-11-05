@@ -20,15 +20,14 @@ export default class CreationWizard extends Vue {
         this.hero = null;
     }
 
-    heroChanged(mode: string, hero: Hero) {
-    console.log('hero changed', hero);
+    public heroChanged(mode: string, hero: Hero) {
     if (mode === 'add') {
       heroService.addHero(hero);
     } else {
-      heroService.updateHero(hero)
+      heroService.updateHero(hero);
     }
   }
-  cancel(){
+  public cancel() {
      this.$router.push('/');
   }
 }

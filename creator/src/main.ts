@@ -4,6 +4,8 @@ import App from './App.vue';
 import router from './router';
 import CreationWizard from './components/wizard/CreationWizard.vue';
 import './registerServiceWorker';
+import '@/assets/css/tailwind.css';
+
 
 // tslint:disable-next-line:no-unused-expression
 new Vue({
@@ -14,5 +16,4 @@ new Vue({
     App,
     CreationWizard,
   },
-
 });

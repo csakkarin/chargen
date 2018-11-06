@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">    
+  <div id="app" class="grid grid-columns-2 purple">
+    <img alt="Chargen logo" src="./assets/logo.png">
     <router-view></router-view>
   </div>
 </template>
@@ -14,12 +14,13 @@ export default class App extends Vue {}
 
 <style lang="scss">
 #app {
+  margin-top: 60px;
+  color: #2c3e50;
+  text-align: center;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 
 </style>

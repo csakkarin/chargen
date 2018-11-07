@@ -1,0 +1,156 @@
+{
+    "database": "ReferenceDB",
+    "version": 1,
+    "table": "Classes",
+    "classes": [
+    {
+        "name":"Barbarian",
+        "proficiency":2,        
+        "features":["Rage", "Unarmored Defense"],
+        "hitDice":"1d12",
+        "hitPoints":{"base":12,"mod":["constitution"]},
+        "proficiencies":["Light armor", "medium armor", "shields","Simple weapons", "martial weapons"],
+        "savingThrows":["Strength","Constitution"],
+        "skills":{
+            "choice": 2,
+            "options": ["Animal Handling", "Athletics", "Intimidation", "Nature", "Perception","Survival"]            
+        },
+        "equipment":[
+            {"a":"greataxe","b":"any martial melee weapon"},
+            {"a":"two handaxes","b":"any simple weapon"},
+            {"a":"explorer's pack"},
+            {"a":"four javelins"}
+        ],
+        "custom":{
+            "rages":2,
+            "rage damage":2
+        }
+    },
+    {
+        "name":"Fighter",
+        "proficiency":2,        
+        "features":["Fighting Style","Second Wind"],
+        "hitDice":"1d10",
+        "hitPoints":{"base":10,"mod":["constitution"]},
+        "proficiencies":["All armor", "shields","Simple weapons", "martial weapons"],
+        "savingThrows":["Strength","Constitution"],
+        "skills":{
+            "choice": 2,
+            "options": ["Acrobatics", "Animal Handling", "Athletics", "History", "Insight", "Intimidation", "Perception", "Survival"]            
+        },
+        "equipment":[
+            {"a":"chain mail","b":["leather", "longbow","20 arrows"]},
+            {"a":["martial weapon","a shield"],"b":" two martial weapons "},
+            {"a":["light crossbow","20 bolts"],"b":" two handaxes"},
+            {"a":"dungeoneer's pack","b":"explorer's pack"}
+        ],
+        "custom":{
+            "Fighting Style":{
+                "choice": 1,
+                "options": ["Archery", "Defense", "Dueling", "Great Weapon Fighting", "Protection", "Two-Weapon Fighting"]            
+            }
+        }
+    },
+    {
+        "name":"Monk",
+        "proficiency":2,        
+        "features":["Unarmored Defense", "Martial Arts"],
+        "hitDice":"1d8",
+        "hitPoints":{"base":8,"mod":["constitution"]},
+        "proficiencies":["Simple weapons", "shortswords"],
+        "toolProficiency": { "choice": 1,
+            "options": ["artisan's instrument","musical instrument "]
+        },
+        "savingThrows":["Strength","Dexterity"],
+        "skills":{
+            "choice": 2,
+            "options": ["Acrobatics", "Athletics", "History", "Insight", "Religion", "Stealth"]            
+        },
+        "equipment":[
+            {"a":"shortsword","b":"any simple weapon "},
+            {"a":"10 darts"},
+            {"a":"dungeoneer's pack","b":"explorer's pack"}
+        ],
+        "ac":{"base":10,"mod":["dexterity","wisdom"]}
+    },
+    {
+        "name":"Paladin",
+        "proficiency":2,        
+        "features":["Divine Sense", "Lay on Hands"],
+        "hitDice":"1d10",
+        "hitPoints":{"base":10,"mod":["constitution"]},
+        "proficiencies":["Simple weapons", "martial weapons"],
+        "savingThrows":["Wisdom", "Charisma"],
+        "skills":{
+            "choice": 2,
+            "options": ["Athletics", "Insight","Intimidation", "Medicine", "Persuasion", "Religion"]            
+        },
+        "equipment":[
+            {"a":[ "martial weapon","a shield" ],"b":"two martial weapons"},
+            {"a":" five javelins","b":"any simple weapon "},
+            {"a":"Chain mail"},
+            {"a":"holy symbol"},
+            {"a":"Priest's pack","b":"explorer's pack"}
+        ]
+    },
+    {
+        "name":"Ranger",
+        "proficiency":2,        
+        "features":["Favored Enemy", "Natural Explorer"],
+        "hitDice":"1d10",
+        "hitPoints":{"base":10,"mod":["constitution"]},
+        "proficiencies":["Light armor", "medium armor", "shields","Simple weapons", "martial weapons"],
+        "savingThrows":["Strength", "Dexterity"],
+        "skills":{
+            "choice": 3,
+            "options": ["Animal Handling", "Athletics", "Insight", "Investigation", "Nature", "Perception", "Stealth","Survival"]            
+        },
+        "equipment":[
+            {"a":"two shortswords","b":"two simple  weapons"},
+            {"a":"scalemail","b":"leather armor"},
+            {"a":"longbow"},
+            {"a":"20 arrows"},
+            {"a":"dungeoneer's pack","b":"explorer's pack"}
+        ],
+        "custom":
+         {
+             "Favored Enemy":{
+            "choice": 1,
+            "options": ["aberrations", "beasts", "celestials", "constructs", "dragons", "elementals", "fey", "fiends", "giants", "monstrosities", "oozes", "plants", "undead"]            
+            },
+            "Favored terrain":{
+                "choice": 1,
+                "options": ["arctic", "coast", "desert", "forest", "grassland", "mountain", "swamp","Underdark"]            
+                }
+        }
+    },
+    {
+        "name":"Rogue",
+        "proficiency":2,        
+        "features":["Expertise", "Sneak Attack", "Thieves' Cant"],
+        "hitDice":"1d8",
+        "hitPoints":{"base":8,"mod":["constitution"]},
+        "proficiencies":["Light armor", "Simple weapons", "hand crossbows", "longswords", "rapiers", "shortswords"],
+        "toolProficiency": { "choice": 0,
+            "options": ["Thieves' tools"]
+        },
+        "savingThrows":["Intelligence", "Dexterity"],
+        "skills":{
+            "choice": 4,
+            "options": ["Acrobatics", "Athletics", "Deception", "Insight", "Intimidation", "Investigation", "Perception", "Performance", "Persuasion", "Sleight of Hand", "Stealth"]            
+        },
+        "equipment":[
+            {"a":"shortsword","b":"rapier"},
+            {"a":"leather armor"},
+            {"a":"2 daggers"},
+            {"a":"thieves' tools"},
+            {"a":["shortbow","20 arrows"],"b":"shortsword"},
+            {"a":"dungeoneer's pack","b":"explorer's pack","c":"burglar's pack"}
+        ],
+        "custom":
+         {
+             "Expertise":{}
+        }
+    }
+]
+}

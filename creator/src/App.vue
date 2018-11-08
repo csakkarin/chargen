@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="grid grid-columns-2 purple">
-    <div>
+    <div class="bg-grey-light flex align-start p-2">
        <font-awesome-icon icon="swords"
         pull="right"
         size="6x"
         style="color:Tomato"
         value="NEW"
         />
-      <h1>CHARGEN !</h1>
+      <h1 class="M5 pl-5">CHARGEN !</h1>
     </div>
-    <div>
-      <router-view></router-view>
+     <div class="bg-grey-light">
+        <router-view></router-view>
     </div>
   </div>
 </template>
@@ -24,6 +24,10 @@ export default class App extends Vue {}
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Metamorphous|Ubuntu');
+
+body{
+  background-color: lightgrey;
+}
 
 #app {
   margin-top: 60px;

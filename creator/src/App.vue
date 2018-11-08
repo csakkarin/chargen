@@ -10,7 +10,11 @@
       <h1 class="M5 pl-5">CHARGEN !</h1>
     </div>
      <div class="bg-grey-light">
+      <transition
+         name="fade"
+         mode="out-in">
         <router-view></router-view>
+      </transition>
     </div>
   </div>
 </template>
@@ -46,4 +50,18 @@ body{
 p {
   font-family: 'Ubuntu', sans-serif;
 }
+
+.fade-enter-active,
+.fade-leave-active {
+  transition-timing-function: ease;
+  transition-duration: 0.3s;
+  transition-property: opacity;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0
+}
+
+
 </style>

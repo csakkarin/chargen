@@ -548,7 +548,7 @@
           },
           "traits": [
             "Naturally Stealthy"
-          ]        
+          ]
         },
         {
           "name": "Stout Halfling",
@@ -558,11 +558,10 @@
           },
           "traits": [
             "Stout Resilience"
-          ]         
+          ]
         }
       ]
     },
-    ,
     {
       "name": "tiefling",
       "description": "",

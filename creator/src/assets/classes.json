@@ -5,7 +5,7 @@
     "classes": [
     {
         "name":"Barbarian",
-        "proficiency":2,        
+        "proficiency":2,
         "features":["Rage", "Unarmored Defense"],
         "hitDice":"1d12",
         "hitPoints":{"base":12,"mod":["constitution"]},
@@ -13,7 +13,7 @@
         "savingThrows":["Strength","Constitution"],
         "skills":{
             "choice": 2,
-            "options": ["Animal Handling", "Athletics", "Intimidation", "Nature", "Perception","Survival"]            
+            "options": ["Animal Handling", "Athletics", "Intimidation", "Nature", "Perception","Survival"]
         },
         "equipment":[
             {"a":"greataxe","b":"any martial melee weapon"},
@@ -28,7 +28,7 @@
     },
     {
         "name":"Fighter",
-        "proficiency":2,        
+        "proficiency":2,
         "features":["Fighting Style","Second Wind"],
         "hitDice":"1d10",
         "hitPoints":{"base":10,"mod":["constitution"]},
@@ -36,7 +36,7 @@
         "savingThrows":["Strength","Constitution"],
         "skills":{
             "choice": 2,
-            "options": ["Acrobatics", "Animal Handling", "Athletics", "History", "Insight", "Intimidation", "Perception", "Survival"]            
+            "options": ["Acrobatics", "Animal Handling", "Athletics", "History", "Insight", "Intimidation", "Perception", "Survival"]
         },
         "equipment":[
             {"a":"chain mail","b":["leather", "longbow","20 arrows"]},
@@ -47,13 +47,13 @@
         "custom":{
             "Fighting Style":{
                 "choice": 1,
-                "options": ["Archery", "Defense", "Dueling", "Great Weapon Fighting", "Protection", "Two-Weapon Fighting"]            
+                "options": ["Archery", "Defense", "Dueling", "Great Weapon Fighting", "Protection", "Two-Weapon Fighting"]
             }
         }
     },
     {
         "name":"Monk",
-        "proficiency":2,        
+        "proficiency":2,
         "features":["Unarmored Defense", "Martial Arts"],
         "hitDice":"1d8",
         "hitPoints":{"base":8,"mod":["constitution"]},
@@ -64,7 +64,7 @@
         "savingThrows":["Strength","Dexterity"],
         "skills":{
             "choice": 2,
-            "options": ["Acrobatics", "Athletics", "History", "Insight", "Religion", "Stealth"]            
+            "options": ["Acrobatics", "Athletics", "History", "Insight", "Religion", "Stealth"]
         },
         "equipment":[
             {"a":"shortsword","b":"any simple weapon "},
@@ -75,7 +75,7 @@
     },
     {
         "name":"Paladin",
-        "proficiency":2,        
+        "proficiency":2,
         "features":["Divine Sense", "Lay on Hands"],
         "hitDice":"1d10",
         "hitPoints":{"base":10,"mod":["constitution"]},
@@ -83,7 +83,7 @@
         "savingThrows":["Wisdom", "Charisma"],
         "skills":{
             "choice": 2,
-            "options": ["Athletics", "Insight","Intimidation", "Medicine", "Persuasion", "Religion"]            
+            "options": ["Athletics", "Insight","Intimidation", "Medicine", "Persuasion", "Religion"]
         },
         "equipment":[
             {"a":[ "martial weapon","a shield" ],"b":"two martial weapons"},
@@ -95,7 +95,7 @@
     },
     {
         "name":"Ranger",
-        "proficiency":2,        
+        "proficiency":2,
         "features":["Favored Enemy", "Natural Explorer"],
         "hitDice":"1d10",
         "hitPoints":{"base":10,"mod":["constitution"]},
@@ -103,7 +103,7 @@
         "savingThrows":["Strength", "Dexterity"],
         "skills":{
             "choice": 3,
-            "options": ["Animal Handling", "Athletics", "Insight", "Investigation", "Nature", "Perception", "Stealth","Survival"]            
+            "options": ["Animal Handling", "Athletics", "Insight", "Investigation", "Nature", "Perception", "Stealth","Survival"]
         },
         "equipment":[
             {"a":"two shortswords","b":"two simple  weapons"},
@@ -116,17 +116,17 @@
          {
              "Favored Enemy":{
             "choice": 1,
-            "options": ["aberrations", "beasts", "celestials", "constructs", "dragons", "elementals", "fey", "fiends", "giants", "monstrosities", "oozes", "plants", "undead"]            
+            "options": ["aberrations", "beasts", "celestials", "constructs", "dragons", "elementals", "fey", "fiends", "giants", "monstrosities", "oozes", "plants", "undead"]
             },
             "Favored terrain":{
                 "choice": 1,
-                "options": ["arctic", "coast", "desert", "forest", "grassland", "mountain", "swamp","Underdark"]            
+                "options": ["arctic", "coast", "desert", "forest", "grassland", "mountain", "swamp","Underdark"]
                 }
         }
     },
     {
         "name":"Rogue",
-        "proficiency":2,        
+        "proficiency":2,
         "features":["Expertise", "Sneak Attack", "Thieves' Cant"],
         "hitDice":"1d8",
         "hitPoints":{"base":8,"mod":["constitution"]},
@@ -137,7 +137,7 @@
         "savingThrows":["Intelligence", "Dexterity"],
         "skills":{
             "choice": 4,
-            "options": ["Acrobatics", "Athletics", "Deception", "Insight", "Intimidation", "Investigation", "Perception", "Performance", "Persuasion", "Sleight of Hand", "Stealth"]            
+            "options": ["Acrobatics", "Athletics", "Deception", "Insight", "Intimidation", "Investigation", "Perception", "Performance", "Persuasion", "Sleight of Hand", "Stealth"]
         },
         "equipment":[
             {"a":"shortsword","b":"rapier"},

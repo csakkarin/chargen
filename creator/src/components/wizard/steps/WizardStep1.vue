@@ -5,7 +5,10 @@
 <script lang="ts">
 import Hero from '../../../models/hero';
 import Vue from 'vue';
+import VeeValidate from 'vee-validate';
 import { Component, Emit, Prop, Watch } from 'vue-property-decorator';
+
+Vue.use(VeeValidate);
 
 @Component({})
 export default class WizardStep1 extends Vue {
@@ -13,11 +16,13 @@ export default class WizardStep1 extends Vue {
     name: HTMLElement;
   };
 
-  @Prop() public hero: Hero;
+  @Prop()
+  public hero: Hero;
   public addingHero = !this.hero;
   public editingHero: Hero | null;
 
-  @Watch('hero') public onHeroChanged(value: string, oldValue: string) {
+  @Watch('hero')
+  public onHeroChanged(value: string, oldValue: string) {
     this.editingHero = this.cloneIt();
   }
 
@@ -25,7 +30,8 @@ export default class WizardStep1 extends Vue {
     const hero = this.editingHero as Hero;
     this.emitRefresh('add', hero);
   }
-  @Emit('cancelled') public cancel() {
+  @Emit('cancelled')
+  public cancel() {
     this.editingHero = null;
   }
 
@@ -35,18 +41,25 @@ export default class WizardStep1 extends Vue {
   public created() {
     this.editingHero = this.cloneIt();
   }
-  @Emit('heroChanged') public emitRefresh(mode: string, hero: Hero) {
+  @Emit('heroChanged')
+  public emitRefresh(mode: string, hero: Hero) {
     this.cancel();
   }
   public mounted() {
-      this.$refs.name.focus();
+    this.$refs.name.focus();
   }
   public save() {
-    if (this.addingHero) {
-      this.addHero();
-    } else {
-      this.updateHero();
-    }
+    this.$validator.validate().then((result) => {
+      if (!result) {
+        alert(`hero's have name's with at least 2 letters`);
+      } else {
+        if (this.addingHero) {
+          this.addHero();
+        } else {
+          this.updateHero();
+        }
+      }
+    });
   }
   public updateHero() {
     const hero = this.editingHero as Hero;

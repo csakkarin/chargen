@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="grid grid-columns-2 purple">
+  <div id="app" class="grid sm:grid-columns-1 md:grid-columns-2 purple">
     <div class="bg-grey-light flex align-start p-2">
        <font-awesome-icon icon="swords"
         pull="right"

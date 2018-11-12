@@ -67,3 +67,15 @@ export default class WizardStep1 extends Vue {
   }
 }
 </script>
+
+<style scoped>
+
+.btn-primary {
+        @apply mr-2 bg-blue text-white font-bold py-2 px-4 rounded;
+   }
+
+   .btn-primary:hover {
+        @apply bg-blue-dark;
+   }
+
+</style>

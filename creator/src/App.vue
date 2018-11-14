@@ -22,8 +22,13 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import HeroCreator from './components/HeroCreator.vue';
+import { referencedb } from './services/referencedb.service';
+export default class App extends Vue {
 
-export default class App extends Vue {}
+  public mounted() {
+    referencedb.setupData();
+  }
+}
 </script>
 
 <style lang="scss">

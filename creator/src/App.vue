@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="m-5 grid sm:grid-columns-1 md:grid-columns-2 bg-indigo-light purple" >
-    <div class=" h-64 bg-grey-light flex align-start p-2">
+    <div class=" bg-grey-light flex align-start p-2">
        <font-awesome-icon icon="swords"
         pull="right"
         size="6x"

@@ -7,8 +7,10 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faSwords} from '@fortawesome/pro-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import CreationWizard from './components/wizard/CreationWizard.vue';
+
 import './registerServiceWorker';
 import '@/assets/css/tailwind.css';
+import '@/assets/css/vue-form-wizard.min.css';
 
 Vue.use(VeeValidate);
 

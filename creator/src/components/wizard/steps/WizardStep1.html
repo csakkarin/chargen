@@ -1,12 +1,42 @@
-<div class="hello">
-    <h1 class="text-3xl">Step 1</h1>
+<form-wizard @on-complete="onComplete" color="#e67e22">
+    <tab-content title="Personal details">
+        <input v-validate="'required|alpha|min:2'"
+        v-model="editingHero.name" ref="name"
+        placeholder="Name"
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline mb-10">
+       <span>{{ errors.first('name') }}</span>
+   
+       <p>
+           <legend for="gender">Gender:</legend>
+           <select id="gender" name="gender" v-model="editingHero.gender">
+             <option value="M">Male</option>
+             <option value="F">Femail</option>
+           </select>
+           </p>
+    </tab-content>
+    <tab-content title="Race">              
+        <ul id="racesList">
+            <li v-for="item in races" >
+              {{item.name}}
+            </li>
+          </ul>
+     </tab-content>
+     <tab-content title="Class">
+        <ul id="classList">
+            <li v-for="item in classes" >
+              {{item.name}}
+            </li>
+          </ul>
+     </tab-content>
+     <tab-content title="Background">
+        Yuhuuu! This seems pretty damn simple
+      </tab-content>
+     <tab-content title="Stats">
+        My second tab content
+     </tab-content>
+     <tab-content title="Skills">
+       Yuhuuu! This seems pretty damn simple
+     </tab-content>
+  </form-wizard>
 
-    <input v-validate="'required|alpha|min:2'"
-     v-model="editingHero.name" ref="name"
-     placeholder="Name"
-     class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline mb-10">
-    <span>{{ errors.first('name') }}</span>
 
-    <button @click="save" class="btn-primary">Save</button>
-    <button @click="cancel" class="bg-blue text-white font-bold py-2 px-4 rounded opacity-50">Cancel</button>
-</div>

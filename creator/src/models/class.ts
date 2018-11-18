@@ -11,6 +11,7 @@ export default interface Class {
     class_levels: ClassLevels;
     subclasses: Reference[];
     spellcasting: Spellcasting;
+    description: string;
     reference: string;
     reference_id: string;
 }

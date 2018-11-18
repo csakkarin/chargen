@@ -1,4 +1,4 @@
-<style scoped lang="scss" src="./WizardStep1.scss"></style>
+<style lang="scss" src="./WizardStep1.scss"></style>
 <template src="./WizardStep1.html"></template>
 
 
@@ -27,11 +27,12 @@ export default class WizardStep1 extends Vue {
   private races: Race[] = [];
   private classes: Class[] = [];
   
+  public selectedClass : Class = null;
+  public selectedRace : Race = null;
+
   public $refs: {
     name: HTMLElement;
-  };
-
- 
+  }
 
   @Watch('hero')
   public onHeroChanged(value: string, oldValue: string) {
@@ -51,14 +52,14 @@ export default class WizardStep1 extends Vue {
     return Object.assign({}, this.hero);
   }
   public created() {
-     raceService.getAll().then((raceList) =>{
+     raceService.getAll().then((raceList) => {
        this.$data.races = raceList;
      });
      classService.getAll().then((classList) =>{
        this.$data.classes = classList;
      });
     
-    this.editingHero = this.cloneIt();
+     this.editingHero = this.cloneIt();
   }
   @Emit('heroChanged')
   public emitRefresh(mode: string, hero: Hero) {
@@ -67,8 +68,14 @@ export default class WizardStep1 extends Vue {
   public  mounted() {
      this.$refs.name.focus();
   }
-  public onComplete(){
+  public onComplete() {
     this.save();
+  }
+  public onClassSelect(clickedClass : Class){
+      this.selectedClass = clickedClass;
+  }
+  public onRaceSelect(clickedRace : Race){
+      this.selectedRace = clickedRace;
   }
   public save() {
     this.$validator.validate().then((result) => {
@@ -88,5 +95,7 @@ export default class WizardStep1 extends Vue {
     const hero = this.editingHero as Hero;
     this.emitRefresh('update', hero);
   }
+
+
 }
 </script>

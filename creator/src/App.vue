@@ -1,6 +1,6 @@
 <template>
-  <div id="app" class="m-5 grid sm:grid-columns-1 md:grid-columns-2 bg-indigo-light purple" >
-    <div class=" bg-grey-light flex align-start p-2">
+  <div id="app" class="m-5 grid bg-black" >
+    <div class="bg-black text-white flex align-start p-2">
        <font-awesome-icon icon="swords"
         pull="right"
         size="6x"
@@ -9,7 +9,7 @@
         />
       <h1 class="M5 pl-5">CHARGEN !</h1>
     </div>
-     <div class="bg-grey-light">
+     <div class="flex mb-4 bg-black text-white">
       <transition
          name="fade"
          mode="out-in">
